@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.DropdownPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="15">
+            <Label Text="Выбор опции" StyleClass="label-title" />
+
+            <Label Text="DROPDOWN" StyleClass="label-normal" />
+            <Picker x:Name="OptionPicker" 
+                    Title="Выберите опцию"
+                    StyleClass="entry">
+                <Picker.Items>
+                    <x:String>OPTION1</x:String>
+                    <x:String>OPTION2</x:String>
+                    <x:String>OPTION3</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Слайдер" StyleClass="label-normal" />
+            <Slider x:Name="ValueSlider" 
+                    Minimum="0" 
+                    Maximum="100" 
+                    Value="50" />
+            <Label x:Name="SliderValueLabel" 
+                   Text="Значение: 50" 
+                   StyleClass="label-normal" />
+
+            <Button Text="Button" 
+                    StyleClass="button" 
+                    Clicked="OnShowValueClicked" />
+
+            <Label x:Name="InfoLabel" 
+                   Text="" 
+                   StyleClass="label-normal" />
+            <Button Text="← Назад" 
+                    StyleClass="button" 
+                    Clicked="OnBackClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
